@@ -1,0 +1,31 @@
+body {
+	background-color: #f0f0f0;
+}
+.icon-bar {
+	background-color: white;
+}
+.navbar {
+	background-color: #3a4349;
+}
+.header-topic {
+	display: inline-block;
+	color: white;
+	font-size: 15px;
+	height: 40px;
+	line-height: 50px;
+}
+.navbar-nav a {
+	color: white;
+}
+.login-btn,.comments-btn {
+	width: 100%;
+	background-color: #ff7f00;
+	color: white;
+	font-weight: bold;
+}
+.personalInfo {
+	margin-bottom: 50px;
+}
+#comments-table input{
+	width: 100px;
+}

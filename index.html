@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>广东工业大学学风督导系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css">
+	<link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="style/css/style.css">
+</head>
+<body>
+	<nav class="navbar" role="navigation">
+	    	<div class="container">
+	    	    	<div class="navbar-header">
+	    	    		<p class="header-topic">欢迎使用广东工业大学学风督导系统</p>
+		    	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#global-navbar">
+		    	        	<span class="sr-only">Toggle navigation</span>
+		    	        	<span class="icon-bar"></span>
+		    	        	<span class="icon-bar"></span>
+		    	        	<span class="icon-bar"></span>
+		    	      </button>
+	    	    	</div>
+	    	    	<div class="navbar-collapse collapse" id="global-navbar" style="height: 1px;">
+	    			<ul class="nav navbar-nav">
+				       <li role="presentation"><a href="javascript:void(0);" id='getComments'>评价</a></li>
+				       <li role="presentation"><a href="javascript:void(0);" id='getMyPersonalInfo'>个人信息</a></li>
+	    			</ul>
+	    	    	</div>
+	    	</div>
+       </nav>
+       <table class="table"><thead><th>个人信息</th></thead></table>
+	<div class="container personalInfo">
+		<div class="row">
+			<div class="col-xs-6">学号/工号：</div>
+			<div class="col-xs-6" id='info_username'>3113006479</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6">姓名：</div>
+			<div class="col-xs-6" id='info_name'>张三</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6">身份：</div>
+			<div class="col-xs-6" id='info_type'>本科生</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6">系统角色：</div>
+			<div class="col-xs-6" id='info_systemType'>学生处</div>
+		</div>
+		
+	</div>
+	<table class="table"><thead><th>被评价人信息</th></thead></table>
+	<table class="table">
+			<thead>
+				<th>姓名</th>
+				<th>学号/工号</th>
+				<th>身份</th>
+			</thead>
+			<tbody id='TeacherInfo'>
+				<tr>
+					<td>王小二</td>
+					<td>123456</td>
+					<td>班主任</td>
+				</tr>
+				<tr>
+					<td>王小二</td>
+					<td>123456</td>
+					<td>班主任</td>
+				</tr>
+			</tbody>
+			
+	</table>
+	<script src='style/js/jquery.min.js'></script>
+	<script src='style/bootstrap/js/bootstrap.min.js'></script>
+	<script src='style/js/style.js'></script>
+</body>
+</html>

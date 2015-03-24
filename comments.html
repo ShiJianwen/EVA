@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>广东工业大学学风督导系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css">
+	<link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="style/css/style.css">
+</head>
+<body>
+	<nav class="navbar" role="navigation">
+	    	<div class="container">
+	    	    	<div class="navbar-header">
+	    	    		<p class="header-topic">欢迎使用广东工业大学学风督导系统</p>
+		    	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#global-navbar">
+		    	        	<span class="sr-only">Toggle navigation</span>
+		    	        	<span class="icon-bar"></span>
+		    	        	<span class="icon-bar"></span>
+		    	        	<span class="icon-bar"></span>
+		    	      </button>
+	    	    	</div>
+	    	    	<div class="navbar-collapse collapse" id="global-navbar" style="height: 1px;">
+	    			<ul class="nav navbar-nav">
+				       <li role="presentation"><a href="javascript:void(0);" id='getComments'>评价</a></li>
+				       <li role="presentation"><a href="javascript:void(0);" id='getMyPersonalInfo'>个人信息</a></li>
+	    			</ul>
+	    	    	</div>
+	    	</div>
+       </nav>
+	<table class="table"><thead><th>评价列表</th></thead></table>
+	<table class="table">
+			<thead>
+				<th>编号</th>
+				<th>姓名</th>
+				<th>类型</th>
+				<th>分值</th>
+			</thead>
+			<tbody id='comments-table'>
+				<tr>
+					<td>001</td>
+					<td>王小二</td>
+					<td>班主任</td>
+					<td><input type="number"></td>
+					<!-- <td>80</td> -->
+				</tr>
+				<tr>
+					<td>002</td>
+					<td>王晓三</td>
+					<!-- <td>60</td> -->
+					<td>辅导员</td>
+					<td><input type="number"></td>
+				</tr>
+			</tbody>
+	</table>
+	<button class="btn btn-default comments-btn" id='push-comments'>提交评价</button>
+	<script src='style/js/jquery.min.js'></script>
+	<script src='style/bootstrap/js/bootstrap.min.js'></script>
+	<script src='style/js/style.js'></script>
+</body>
+</html>

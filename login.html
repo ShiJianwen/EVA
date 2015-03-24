@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>广东工业大学学风督导系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css">
+	<link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="style/css/style.css">
+</head>
+<body>
+	<nav class="navbar" role="navigation">
+	    	<div class="container">
+	    	    	<div class="navbar-header">
+	    	    		<p class="header-topic">欢迎使用广东工业大学学风督导系统</p>
+		    	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#global-navbar">
+		    	        	<span class="sr-only">Toggle navigation</span>
+		    	        	<span class="icon-bar"></span>
+		    	        	<span class="icon-bar"></span>
+		    	        	<span class="icon-bar"></span>
+		    	      </button>
+	    	    	</div>
+	    	    	<div class="navbar-collapse collapse" id="global-navbar" style="height: 1px;">
+	    			<ul class="nav navbar-nav">
+				       <li role="presentation"><a href="javascript:void(0);" id='getComments'>评价</a></li>
+				       <li role="presentation"><a href="javascript:void(0);" id='getMyPersonalInfo'>个人信息</a></li>
+	    			</ul>
+	    	    	</div>
+	    	</div>
+       </nav>
+	<div class="container">
+		<!-- <form action='http://127.0.0.1:8080/EVA/login.php' method="post"> -->
+			<div class="form-group">
+				<label for="username">学号</label>
+				<input type="text" class="form-control" id='username' name='username' value="3113005732">
+			</div>
+			<div class="form-group">
+				<label for="password">密码</label>
+				<input type="password" class="form-control" id='password' name='password' value="c22999ccb2bba6f48a82336706792cb55ebdf8ad">
+			</div>
+			<button role='button' class="btn btn-default login-btn"  id='login-btn'>登录</button>
+			
+		<!-- </form> -->
+	</div>
+	<script src='style/js/jquery.min.js'></script>
+	<script src='style/bootstrap/js/bootstrap.min.js'></script>
+	<script src='style/js/style.js'></script>
+</body>
+</html>
