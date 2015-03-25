@@ -1,6 +1,6 @@
 	var User = {};  //用户个人信息对象
 	var TeacherList = [];  //被评价人列表
-	var Host = 'http://192.168.1.113:8080/weiXin'; 
+	var Host = 'http://10.10.106.150:8080/jeecg-framework/'; 
 	//登录ajax请求
 	$('#login-btn').click(function(){
 
@@ -13,7 +13,7 @@
 			        'Accept': 'application/json',
 			        'Content-Type': 'application/json' 
 			    },
-			url: Host + "/login",
+			url: Host + "weChatController.do?/login",
 			type : "POST",
 			// crossDomain: true,
 			"dataType" : "json",
@@ -24,37 +24,48 @@
 			complete : function(data){
 				console.log(data.status);
 				if(data.status == '200') {  //登录成功时获取个人信息及被评价人列表
-					$.get(Host+"/getMyPersonInfo",
-						{
+					console.log(data);
+					$.ajax({
+						headers: { 
+						        'Accept': 'application/json',
+						        'Content-Type': 'application/json' 
+						    },
+						url: Host+"weChatController.do?getMyPersonInfo",
+						"type" : "GET",
+						"dataType" : "json",
+						"data" : {
 							"username" : User.userId
 						},
-						function(data) {
-							if(data.status === '200') {
-								User.userId = data.username;
-								User.userName = data.user_Autonym;
-								User.userType = data.user_Type;
-								User.userSystenType = data.user_Roles;
-								$.each(data.teacherList,function(){
+						complete: function(data) {
+							console.log(data.status);
+							if(data.status == '200') {
+								console.log(data);
+								// User.userId = data.username;
+								// User.userName = data.user_Autonym;
+								// User.userType = data.user_Type;
+								// User.userSystenType = data.user_Roles;
+								// $.each(data.teacherList,function(){
 									// $('#TeacherInfo').append('<tr><td>'+this.teacherName+'</td><td>'+this.teacherNo+'</td><td>'+this.teacherType+'</td></tr>');
-									TeacherList.push({"teacherName":this.teacherName,"teacherNo":this.teacherNo,"teacherType":this.teacherType });
-								});
+									// TeacherList.push({"teacherName":this.teacherName,"teacherNo":this.teacherNo,"teacherType":this.teacherType });
+								// });
 							}
-						});
+						}
+					});
 				}
 			 // : function(error) {
 			 	if(data.status == '400') {
 			 		// alert('fuwuqi');
 			 		$('form').append('服务器错误');
 			 	}
-				if(data.status === '404') {
+				if(data.status == '404') {
 					$('form').append('用户不存在！');
 
 				}
-				if(data.status === '401') {
+				if(data.status == '401') {
 					$('form').append('密码错误！');
 
 				}
-				if(data.status === '403') {
+				if(data.status == '403') {
 					$('form').append('禁止访问！');
 
 				}
